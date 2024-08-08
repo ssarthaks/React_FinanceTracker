@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useTrans } from "../Context/FinanceContext";
+import { Link } from "react-router-dom";
 
 function AddTransaction() {
   const { addTrans } = useTrans(); // Access addTrans from context
@@ -89,6 +90,13 @@ function AddTransaction() {
           Submit
         </button>
       </form>
+      <div className="flex items-center justify-center">
+        <Link to="/listtransaction">
+          <button className="text-white text-xl rounded-2xl text-bold bg-gradiant1 py-3 px-7 mt-4">
+            <strong>View Transactions</strong>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
